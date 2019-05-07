@@ -1,8 +1,7 @@
 import React from "react";
 import { View, Text ,Button} from "react-native";
-import HomeScreen from './Layout';
-import HomePage from './page/Home/HomeStack';
-import MinePage from './page/Mine/MineStack';
+import HomePage from './page/Home';
+import MinePage from './page/Mine';
 
 import { createStackNavigator, createAppContainer ,createBottomTabNavigator, BottomTabBar} from "react-navigation";
 import AntDesignIcon from 'react-native-vector-icons/AntDesign'
@@ -135,4 +134,4 @@ const AppNavigator = createBottomTabNavigator({
   }
 });
 
-export const BottomTab =  createAppContainer(AppNavigator);
+export default  createAppContainer(AppNavigator);
