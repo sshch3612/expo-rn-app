@@ -19,6 +19,8 @@ class Home extends React.Component {
   state = {
     color: 'red'
   }
+
+  static router = HomePage.router;
   static navigationOptions = ( ) =>({
     title: '首页',//通用标题可以用作备用headerTitle和tabBarLabel。
     color: true,
@@ -29,7 +31,7 @@ class Home extends React.Component {
   })
   render() {
     return (
-      <HomePage></HomePage>
+      <HomePage navigation={this.props.navigation}/>
     );
   }
 }
@@ -83,6 +85,8 @@ class Story extends React.Component{
 }
 
 class Mine extends React.Component {
+
+  static router = MinePage.router;
   static  navigationOptions = {
     title: '我的',
     headerTitle: '我的',
@@ -91,7 +95,7 @@ class Mine extends React.Component {
     } 
   }
   render() {
-    return (<MinePage></MinePage>
+    return (<MinePage  navigation={this.props.navigation}/>
     );
   }
 }
@@ -107,7 +111,7 @@ const AppNavigator = createBottomTabNavigator({
   Mine: Mine
 },
 {
-  initialRouteName: "Mine",//默认加载
+  initialRouteName: "Home",//默认加载
   backBehavior: 'initialRoute', //后退按钮导致选项卡切换，默认initialRoute，切换到首页,none:  不切换
   lazy: true,//默认是true，false表示渲染所有选项卡,true，仅在第一次激活时才呈现
   //tabBarComponent: 覆盖用作标签栏的组件

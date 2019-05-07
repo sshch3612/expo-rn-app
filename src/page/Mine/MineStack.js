@@ -7,7 +7,7 @@ import Mine from './Mine';
 import Basket from './Basket';
 import HistoryScreen from './History';
 
-import { createStackNavigator, createAppContainer } from "react-navigation";
+import { createStackNavigator } from "react-navigation";
 
 
 
@@ -25,4 +25,5 @@ const AppNavigator = createStackNavigator({
   initialRouteName: 'Mine',//设置堆栈的默认屏幕。必须匹配路径配置中的一个键。
 });
 
-export default createAppContainer(AppNavigator);
+export default AppNavigator;
+// createAppContainer(AppNavigator);

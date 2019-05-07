@@ -20,7 +20,8 @@
     "react-navigation": "^3.3.2"
   },
   "devDependencies": {
-    "babel-preset-expo": "^5.0.0"
+    "babel-preset-expo": "^5.0.0",
+    "native-base": "^2.12.1"
   },
   "private": true
 }
