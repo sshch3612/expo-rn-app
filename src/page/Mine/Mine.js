@@ -15,7 +15,8 @@ export default class Mine extends React.Component {
   static navigationOptions  = {
     headerTitle:'我的',
     headerBackTitle: null,
-    headerStyle: {borderBottomWidth: 0,textAlign:'center'}//控制标题组件样式
+    headerTitleStyle:{color:'red',textAlign:'center',flex:1},
+    headerStyle:{elevation:0},//elevation 可去除header 的阴影线
   }
   _basket = () => {
     this.props.navigation.navigate('Basket')
