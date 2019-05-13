@@ -5,20 +5,19 @@
  * width:750
  * height:1334
  */
-let ReactNative = require('react-native');
-// 获取屏幕的dp
-let Dimensions = require('Dimensions');
+
+import {Dimensions, PixelRatio} from 'react-native'
 let screenW = Dimensions.get('window').width;
 let screenH = Dimensions.get('window').height;
-let fontScale = ReactNative.PixelRatio.getFontScale();
-let pixelRatio = ReactNative.PixelRatio.get();
+let fontScale = PixelRatio.getFontScale();
+let pixelRatio = PixelRatio.get();
 // 高保真的宽度和告诉
 const designWidth = 750.0;
 const designHeight = 1334.0;
 
 // 根据dp获取屏幕的px
-let screenPxW = ReactNative.PixelRatio.getPixelSizeForLayoutSize(screenW);
-let screenPxH = ReactNative.PixelRatio.getPixelSizeForLayoutSize(screenH);
+let screenPxW = PixelRatio.getPixelSizeForLayoutSize(screenW);
+let screenPxH = PixelRatio.getPixelSizeForLayoutSize(screenH);
 
 /**
  * 设置text

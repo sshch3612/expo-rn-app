@@ -1,8 +1,27 @@
 import React from "react";
 import Statusbar from "../../Components/StatusBar";
-import { Container, View, Button, Text, Content } from "native-base";
+import { Image } from "react-native";
+import {
+  Container,
+  List,
+  ListItem,
+  View,
+  Button,
+  Text,
+  Content,
+  Card,
+  CardItem,
+  Left,
+  Body,
+  Right,
+  Icon
+} from "native-base";
+// import Flast  from ''
 import HeaderSeach from "../../Components/HeaderSeach";
-
+import Lineslide from "../../Components/LineSlide";
+import { Col, Row, Grid } from "react-native-easy-grid";
+import FlatListView from "../../Components/FlatListView";
+import Meal from "./Mealitem";
 export default class Home extends React.Component {
   static navigationOptions = {
     header: null
@@ -13,13 +32,13 @@ export default class Home extends React.Component {
   render() {
     return (
       <Container>
-        <View>
+        <View style={{ position: "relative", zIndex: 33 }}>
           <Statusbar backgroundColor={"#FFD39B"} />
           <HeaderSeach />
         </View>
-        <Content>
-          
-        </Content>
+        <View style={{ position: "relative",marginBottom:65}}>
+            <FlatListView ListHeaderComponent={<Meal />} />
+        </View>
       </Container>
     );
   }

@@ -12,7 +12,7 @@ const renderItems = [{url:'http://img1.hoto.cn/haodou/g/4/20190307/8ae325aa7c6.j
  * @class LineSlide
  * @extends {React.PureComponent}
  */
-export default class LineSlide extends React.PureComponent{
+export default class  extends React.PureComponent{
 
   _renderItem = () => {
     return renderItems.map((item, index) =>(
@@ -28,8 +28,9 @@ export default class LineSlide extends React.PureComponent{
   render(){
     return(
       <View style={style.scrollView}>
-        <ScrollView horizontal={true}//水平滚动
-        showsHorizontalScrollIndicator={false}//表示是否显示水平与垂直的滑动指示器，为布尔类型。
+        <ScrollView
+          horizontal={true}//水平滚动
+          showsHorizontalScrollIndicator={false}//表示是否显示水平与垂直的滑动指示器，为布尔类型。
         >
           {this._renderItem()} 
         </ScrollView>
@@ -39,6 +40,9 @@ export default class LineSlide extends React.PureComponent{
 }
 
 const style = StyleSheet.create({
+  scrollView:{
+
+  },
   imagecontainer:{
     width:scaleSizeW(350),
     height:scaleSizeH(270),
