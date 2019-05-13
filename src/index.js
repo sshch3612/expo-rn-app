@@ -10,7 +10,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
  *navigationOptions  
  *stackNavigator中配置标题栏
  *bottomTabnavigator中配置Tab
- *
+ *https://www.cnblogs.com/qiyecao/p/8334507.html //配置项中文解读
  * @class Home
  * @extends {React.Component}
  */
